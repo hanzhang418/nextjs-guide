@@ -16,15 +16,22 @@
 <div id="app"></div>
 <script type="text/babel" data-type="module" data-presets="react">
     import React from 'react';
-    import { createRoot } from 'react-dom/client';
+    import {createRoot} from 'react-dom/client';
 
     const domNode = document.getElementById('app');
 
     function Header() {
         return <h1>Develop. Preview. Ship.</h1>
     }
+
+    function HomePage() {
+        return <div>
+            <Header/>
+        </div>
+    }
+
     const root = createRoot(domNode);
-    root.render(<Header />);
+    root.render(<HomePage/>);
 </script>
 </body>
 </html>
